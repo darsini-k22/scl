@@ -1,3 +1,20 @@
+#eq to aug matrix
+import re
+ 
+mat=[]
+eqlist=[]
+agmat=[]
+eq=int(input("Enter the number of equations:"))
+for i in range(eq):
+    eqlist.append(input("Enter the equation:"))
+ 
+for j in range(eq):
+    if re.findall('[0-9]+',eqlist[j]):
+        agmat.append(re.findall("\d",eqlist[j]))
+ 
+print(agmat)
+
+
 #rref or ref
 n2 = int(input("Enter number of equations:"))
 n1 = int(input("Enter number of unknowns:"))
